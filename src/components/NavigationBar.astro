@@ -1,0 +1,14 @@
+---
+import Link from "./Link.astro";
+
+    const { projectName } = Astro.props;
+---
+
+<div class="flex px-10 md:px-45 py-1 border-dotted border-b-2">
+    <a class="text-4xl text-shadow-black text-shadow-2xs font-bold py-4 italic" href="/"> { projectName } </a>
+    
+    <div class="flex-1 flex flex-row-reverse items-center gap-4 px-5">
+        <Link href="/member" text="Members" />
+        <Link href="/documentation" text="Documentations " />
+    </div>
+</div>
