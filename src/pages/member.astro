@@ -4,10 +4,40 @@ import NavigationBar from '../components/NavigationBar.astro';
 import SubHeading from '../components/SubHeading.astro'
 
 import { siteInfo } from '../lib/config';
+import Body from '../components/Body.astro';
+import MemberCard from '../components/MemberCard.astro';
 ---
 
 <Layout>
 	<NavigationBar projectName = {siteInfo.projectName} />
 
-	Work in progress
+	<Body>
+        <div class="grid grid-cols-3 gap-4">
+            <MemberCard 
+                name="Kayne Juro Chandra" 
+                email="kjchandr001@mymail.sim.edu.sg" 
+                role="Team Leader" />
+
+            <MemberCard 
+                name="Neo Wayne" 
+                email="wneo003@mymail.sim.edu.sg" 
+                role="Member" />
+
+            <MemberCard 
+                name="Ryu Hyeri" 
+                email="ryu011@mymail.sim.edu.sg" 
+                role="Member" />
+
+            <MemberCard 
+                name="Abdul Aziz Bin Adil" 
+                email="abdulaba001@mymail.sim.edu.sg" 
+                role="Member" />
+
+            <MemberCard 
+                name="Lee Looi Yen" 
+                email="lylee016@mymail.sim.edu.sg" 
+                role="Member" />
+        </div>
+
+    </Body>
 </Layout>
