@@ -5,12 +5,12 @@ import { config } from "../lib/config";
 const { projectName } = Astro.props;
 ---
 
-<div class="flex px-10 md:px-45 py-1 border-dotted border-b-2">
+<div class="flex px-3 md:px-20 lg:px-45 py-1 border-dotted border-b-2">
     <a 
         class="text-4xl text-shadow-black text-shadow-2xs font-bold py-4 italic" 
         href=`/${config.basePath}`> { projectName } </a>
     
-    <div class="flex-1 flex flex-row-reverse items-center gap-4 px-5">
+    <div class="flex-1 flex flex-row-reverse items-center gap-4">
         <Link href=`/${config.basePath}/member` text="Members" />
         <Link href=`/${config.basePath}/documentation` text="Documentations " />
     </div>
