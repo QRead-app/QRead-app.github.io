@@ -3,8 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import NavigationBar from '../components/NavigationBar.astro';
 import SubHeading from '../components/SubHeading.astro'
 
-import { siteInfo } from '../lib/config';
+import { config, siteInfo } from '../lib/config';
 import Body from '../components/Body.astro';
+import Link from '../components/Link.astro';
+import MemberCard from '../components/MemberCard.astro';
 ---
 
 <Layout>
@@ -12,11 +14,71 @@ import Body from '../components/Body.astro';
 
 	<Body>
 		<SubHeading title="Our Project" />
-		<div class="ml-5 mt-2">Lorem Ipsum</div>
+		<div class="ml-5 mb-5 mt-3 text-xl">
+			A quick and simple book borrowing app that lets you borrow books with ease using QR code scanning
+		</div>
 		<br/>
 
 		<SubHeading title="Our Objectives" />
-		<div class="ml-5 mt-2">Lorem Ipsum</div>
+		<div class="ml-5 mb-5 mt-3 text-xl">
+			
+			<div class="flex">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 18" stroke-width="3" stroke="currentColor" class="size-6 text-primary">
+					<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+				</svg>
+				<div class="ml-2">Simple and intuitive app designed for all users</div>
+			</div>
+
+			<div class="flex">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 18" stroke-width="3" stroke="currentColor" class="size-6 text-primary">
+					<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+				</svg>
+				<div class="ml-2">Effortless borrowing with just a scan</div>
+			</div>
+
+			<div class="flex">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 18" stroke-width="3" stroke="currentColor" class="size-6 text-primary">
+					<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+				</svg>
+				<div class="ml-2">Secure borrowing with our quick and safe biometric authentication</div>
+			</div>
+
+		</div>
+		<br/>
+
+		<SubHeading title="Our Documentations" />
+		<div class="ml-5 mb-5 mt-3 text-xl">
+			<Link href=`${config.documentationLink}` text="Link" />
+		</div>
+		<br/>
+
+		<SubHeading title="Meet the Team" />
+		<div class="mx-5 mb-5 mt-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+            <MemberCard 
+                name="Kayne Juro Chandra" 
+                email="kjchandr001@mymail.sim.edu.sg" 
+                role="Team Leader" />
+
+            <MemberCard 
+                name="Neo Wayne" 
+                email="wneo003@mymail.sim.edu.sg" 
+                role="Member" />
+
+            <MemberCard 
+                name="Ryu Hyeri" 
+                email="ryu011@mymail.sim.edu.sg" 
+                role="Member" />
+
+            <MemberCard 
+                name="Abdul Aziz Bin Adil" 
+                email="abdulaba001@mymail.sim.edu.sg" 
+                role="Member" />
+
+            <MemberCard 
+                name="Lee Looi Yen" 
+                email="lylee016@mymail.sim.edu.sg" 
+                role="Member" />
+        </div>
 		<br/>
 	</Body>
 </Layout>
