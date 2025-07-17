@@ -4,5 +4,5 @@ export const siteInfo = {
 };
 
 export const config = {
-  basePath: "fyp_site",
+  basePath: "/",
 };
