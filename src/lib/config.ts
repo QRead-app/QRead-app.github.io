@@ -1,6 +1,6 @@
 export const siteInfo = {
-  title: "QR FYP",
-  projectName: "QR FYP",
+  title: "QRead",
+  projectName: "QRead",
 };
 
 export const config = {
